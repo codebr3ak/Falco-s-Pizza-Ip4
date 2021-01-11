@@ -11,7 +11,7 @@ function GetPizza(name, size, crust, topping,total){
     this.total = total;
 };
 
-$(document).ready(function){
+$(document).ready(function(){
     $(button.checkout).click(function(event){
         let pizzaName = $("#name option:selected").val();
         let pizzaSize = $("#size option:selected").val();
@@ -20,9 +20,10 @@ $(document).ready(function){
     })
 }
 
-$.each($("input[name='toppings']:checked"),function(){
-    pTopping.push($(this).val());
+.each($("input[name='toppings']:checked"),function(){
+    pizzaTopping.push($(this).val());
   })
+
 
   switch(pizzaSize){
     case "0":
