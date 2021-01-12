@@ -91,63 +91,71 @@
   
   <div class="orders" id="order">
     <!-- <h1 class="text-center" id-order-pizza>Order Pizza</h1> -->
-    <div class="form-group-row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8 order overlay text-center">
-          <form class="col-sm-6 offset-sm-3 text-center">
+         
+  <div class="row">
+    <div class="col-lg-12 col-md-6">
+    <div class="book_f text-center col-lg-12 col-md-6">
+    <form action="" class="mt-5">
+        <label for="select">Select Your Flavor</label>
+        <select class=" custom-select custom-select-md mb-3 name" id="name">
+          <option selected value="0">select your flavor</option>
+          <option value="Greek Pizza">Greek Pizza</option>
+          <option value="Chocolate pizza">Chocolate pizza</option>
+          <option value="Neapolitan Pizza">Neapolitan Pizza</option>
+          <option value="Iranian Pizza">Iranian Pizza</option>
+        </select>
 
-            <label>Choose your pizza type:</label>
-            <select class="custom-select custom-select-md mb-3 type" id="name" required>
-              <option value="chickentikka">Chicken Tikka</option>
-              <option value="boerewors">Boerewors</option>
-              <option value="mushroom">Chicken and Mushroom</option>
-              <option value="periperi">Peri-Peri Chicken</option>
-              <option value="hawaiian">Hawaiian</option>
-              <option value="bbq">BBQ Steak</option>
-            </select>
-
-            <label>Choose preffered size:</label>
-            <select class="custom-select custom-select-md mb-3 type" id="size"required>
-              <option value="regular">Small</option> 
-              <option value="regular">Regular</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-            </select>
-
-            <label for="crust">Choose your favorite Crust:</label>
-            <select class="custom-select custom-select-md mb-3" id="crust" required>
-                <option value="thin">Thin Crust @ Ksh. 100</option>
-                <option value="thick">Thick Crust @ Ksh. 150</option>
-                <option value="flatbread">FlatBread Crust @ sh. 200</option>
-                <option value="custom">Custom Crust @ sh. 250</option>
-            </select>
-            <label>Select Your favourite Toppings</label>
-            <select class="custom-select custom-select-md mb-3" id="toppings" required>
-                
-                <option value="onions">Onions & Tomatoes @ sh. 50</option>
-                
-                <option value="tomato">Chicken Tikka @ sh. 100</option>
-                <option value="macon">Macon @ sh. 120</option>
-                <option value="greenpepper">Green Pepper @ sh. 80</option>
-                <option value="sweetcorn">Sweet Corn @ sh. 100</option>
-                <option value="olives">Olives @ sh. 120</option>
-                
-                <option value="mushroom">Mushroom @ sh. 80</option>
-                <option value="pineapple">Pineapple @ sh. 100</option>
-                
-                <option value="mince">Mince @ sh. 60</option>
-                <option value="macaroni">Macaroni @ sh. 50</option>
-                <option value="beef">Beef Peperoni @ sh. 100</option>
-                <option value="chicken">Periperi Chicken @ sh. 100</option>
-            </select>
-
-            <label for="number">Number of Pizza's</label>
-                <input type="number" class="form-control" id="number" placeholder="Number of pizzas" min="1" required>
-
-          </form>
-          <br>
-          <a href="#last"><button type="submit" class="btn btn-success checkout" id="checkout">Checkout</button></a>
+      <label for="select">Select Size</label>
+      <select class="browser-default custom-select custom-select-md mb-3" id="size">
+        <option selected value="0">Select your size</option>
+        <option value="1500">Large</option>
+        <option value="1000">Medium</option>
+        <option value="700">Small</option>
+      </select>
+      <label for="crust">Choose your favorite Crust</label>
+        <select class="browser-default custom-select custom-select-md mb-3" id="crust">
+            <option selected value="0">Select your preferred crust!</option>
+          <option value="200">Crispy</option>
+          <option value="350">Stuffed</option>
+          <option value="250">Gluten</option>
+          <option value="200">Flatbread</option>
+          <option value="300">Focaccia</option>
+        </select>
         
+
+        <label for="crust">Choose your favorite toppings</label>
+        <select class="browser-default custom-select custom-select-md mb-3" id="topping">
+            <option selected value="0">Select your toppings!</option>
+          <option value="200">meat</option>
+          <option value="150">suasage</option>
+          <option value="100">icy</option>
+          <option value="200">bugger</option>
+          <option value="100">salad</option>
+        </select>
+         
+         
+      <button type="submit" class="btn btn-secondary bg-secondary book">Checkout</button>
+      
+    </form>
+
+
+    <div class="table ">
+       
+      <table class="col-lg-12 col-md-4 bg-success mt-5">
+         
+        <tr>
+            <th>NAME</th>
+            <th>PIZZA SIZE</th>
+            <th> CRUST</th>
+            <th>TOPPINGS</th>
+            <th>PRICE</th>
+        </tr>
+        <tbody>
+
+        </tbody>
+        
+      </table> 
+          
 
 <!-- Delivery -->
         <div class="choice">
@@ -165,8 +173,12 @@
                       <input type="text" class="form-control cdata" placeholder="Enter your phone number: ">
                       <input type="text" class="form-control cdata" placeholder="Enter the location: ">
                       <br> <br>
-                      <button class="btn bg-info text-center d-block mx-auto go">Checkout</button>
+                      <button class="btn bg-info text-center d-block mx-auto go"  id="final">Checkout</button>
                   </form>
+
+     <!-- <button class="btn bg-warning mt-5" id="final"><strong>CHECK OUT</strong></button> -->
+
+     <p class="pt-2"><strong>YOUR TOTAL PRICE IS :<p id="price"> </p></strong></p>
       
                   <div class="col-sm-3"></div>
               </div>
@@ -220,7 +232,7 @@
 
 <script src="./javascript/jquery-3.5.1.js"></script>
 <script src="./javascript/bootstrap.min.js"></script>
-<script src="./javascript/main.js"></script>
+<script src="javascript/main.js"></script>
 </body>
 
 </html>             
