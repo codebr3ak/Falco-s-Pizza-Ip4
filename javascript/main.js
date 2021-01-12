@@ -20,10 +20,6 @@ $("document").ready(function(){
      var pCrust =parseInt($("#crust option:selected").val()); 
      var pTopping= parseInt($("#topping option:selected").val());
     
-     
-    
-
-  
 
   let nOrder = new Order(pSize,pCrust,pTopping);
 
@@ -40,7 +36,7 @@ $("document").ready(function(){
     
   });
 
-  $("button#final").click(function(event){
+  $("button#check").click(function(event){
       $("#price:last").text(total);
       $("#last").show();
       
